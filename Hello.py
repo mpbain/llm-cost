@@ -45,7 +45,6 @@ def main():
                 st.success("Cost Per Month: " + str(round(cost_per_month, 3)) + " $")
                 st.success("Cost Per Year: " + str(round(cost_per_year, 3)) + " $")
 
-                st.write("This calculation is based on the assumptions. This app don't take any responsibility for the accuracy of the calculation. Please use this app at your own risk.")
             elif option == 'GPT-4':
                 cost_per_day = average_number_of_users * average_prompt_frequency * average_prompt_tokens * GPT4_PROMPT_COST + average_number_of_users * average_prompt_frequency * average_completions_tokens * GPT4_COMPLETIONS_COST
                 cost_per_month = cost_per_day * 30
@@ -53,7 +52,7 @@ def main():
                 st.success("Cost Per Day: " + str(round(cost_per_day, 3)) + " $")
                 st.success("Cost Per Month: " + str(round(cost_per_month, 3)) + " $")
                 st.success("Cost Per Year: " + str(round(cost_per_year, 3)) + " $")
-                ##st.write("This calculation is based on the assumptions. This app don't take any responsibility for the accuracy of the calculation. Please use this app at your own risk.")
+                
             else:
                 st.error("Please select an LLM")
 
